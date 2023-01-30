@@ -1,19 +1,19 @@
 {
-    "version": "8.5.83",
+    "version": "8.5.85",
     "description": "Tomcat, an open source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies. (version 8)",
     "homepage": "https://tomcat.apache.org/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83-windows-x64.zip",
-            "hash": "sha512:c898526ea7df66ca9e3418cda1196a7e6b339151d81e3cdd10438147b62edf24da99ff9f54317cbcc52b02e786b9dcd3da4ff70b082b1f27e709f0cbc91c9fee"
+            "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.85/bin/apache-tomcat-8.5.85-windows-x64.zip",
+            "hash": "sha512:824da33c098a5852865dce7664b29fd84c945d003eb58fc93f65f59f7c2ed57636fed18a502e3046e8e54ec3214b0628580c2a078bd86ce280899bfb915e5c31"
         },
         "32bit": {
-            "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83-windows-x86.zip",
-            "hash": "sha512:eb22fc512ecfa6cd2ad07433d212a26cf028cd439a06f87a20c9a0d34fdb4dfbae7603fb91fd6ecd361f7587e06fef7d5c3fdfc6e5e4aa9280652e55e6fc47cb"
+            "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.85/bin/apache-tomcat-8.5.85-windows-x86.zip",
+            "hash": "sha512:7853d89d941be38377f584a8d2d525ae7f5b43472bef391910afc52cb3bc18103c104916186702fe6a2897b27d7685b9550e0b4af55b94fe808ad1f7f667e91a"
         }
     },
-    "extract_dir": "apache-tomcat-8.5.83",
+    "extract_dir": "apache-tomcat-8.5.85",
     "bin": "bin\\catalina.bat",
     "env_set": {
         "CATALINA_HOME": "$dir",

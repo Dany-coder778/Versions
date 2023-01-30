@@ -1,12 +1,12 @@
 {
     "homepage": "https://www.beeflang.org/",
     "description": "Beef programming language compiler. (nightly version)",
-    "version": "0.43.5.10182022",
+    "version": "0.43.5.12312022",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "http://nightly.beeflang.org/BeefSetup_0_43_5__10_18_2022.exe#/dl.7z",
-            "hash": "ef01e023fd379d948a23cb68d24482c60dba81918e4f15404ac3f9c0b46a0e69"
+            "url": "http://nightly.beeflang.org/BeefSetup_0_43_5__12_31_2022.exe#/dl.7z",
+            "hash": "e57b4c92fbdf108743631edf7675675b94b5941e43a77fa0532494dcb0decc18"
         }
     },
     "bin": [

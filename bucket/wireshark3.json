@@ -1,5 +1,5 @@
 {
-    "version": "3.6.8",
+    "version": "3.6.11",
     "description": "A network protocol analyzer that lets you see what’s happening on your network at a microscopic level.",
     "homepage": "https://www.wireshark.org/",
     "license": "GPL-2.0-or-later",
@@ -12,12 +12,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://www.wireshark.org/download/win64/Wireshark-win64-3.6.8.exe#/dl.7z",
-            "hash": "17ce19def77592d4c0fb0b680e77e4712dd6c8c4af79c6d58a281eb509a4f34b"
+            "url": "https://www.wireshark.org/download/win64/Wireshark-win64-3.6.11.exe#/dl.7z",
+            "hash": "c8ba946984eaaac81653c14a39ede8765605e90bf73b7695fec82275e1773a6a"
         },
         "32bit": {
-            "url": "https://www.wireshark.org/download/win32/Wireshark-win32-3.6.8.exe#/dl.7z",
-            "hash": "332aff4889f73ee1daf656e3411554685796a51f8059e2cd531bb60fb754799c"
+            "url": "https://www.wireshark.org/download/win32/Wireshark-win32-3.6.11.exe#/dl.7z",
+            "hash": "989365ec12826a06876d0bc8c7fe0437a1664debf378aaddae34955c2f1dc23d"
         }
     },
     "installer": {
