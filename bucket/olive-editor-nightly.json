@@ -1,12 +1,12 @@
 {
-    "version": "e7982239",
+    "version": "70690c5b",
     "description": "Non-linear video editor aiming to provide a fully-featured alternative to high-end professional video editing software.",
     "homepage": "https://olivevideoeditor.org",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/olive-editor/olive/workflows/ci/master/Olive-e7982239-Windows-x86_64-Portable.zip",
-            "hash": "c48b8aaa6d7aa79e48891df599e9b02488ea66ac33bee50aaef40626fa94556f",
+            "url": "https://nightly.link/olive-editor/olive/workflows/ci/master/Olive-70690c5b-Windows-x86_64-Portable.zip",
+            "hash": "892e6526cb54d2520674dd0b8c1f7b56eff7830b8297364b7e2a5f005586776d",
             "extract_dir": "olive-editor"
         }
     },

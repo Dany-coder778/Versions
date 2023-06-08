@@ -1,5 +1,5 @@
 {
-    "version": "19.17.0.0.0",
+    "version": "19.19.0.0.0",
     "description": "Additional libraries for enabling ODBC applications with Oracle Instant Client.",
     "homepage": "https://www.oracle.com/database/technologies/instant-client.html",
     "license": {
@@ -9,27 +9,27 @@
     "depends": "oracle-instant-client19",
     "architecture": {
         "64bit": {
-            "url": "https://download.oracle.com/otn_software/nt/instantclient/1917000/instantclient-odbc-windows.x64-19.17.0.0.0dbru.zip",
-            "hash": "db51921c879ec731577f748aec4761e0568aa4907015400270aa0a5dabe0f597"
+            "url": "https://download.oracle.com/otn_software/nt/instantclient/1919000/instantclient-odbc-windows.x64-19.19.0.0.0dbru.zip",
+            "hash": "1716222a9512e4388562634758c156e645e73dc8629e35f6232eddb261725066"
         },
         "32bit": {
-            "url": "https://download.oracle.com/otn_software/nt/instantclient/1917000/instantclient-odbc-nt-19.17.0.0.0dbru.zip",
-            "hash": "2a5515a0025e4b1d8c6c6ab8135f708cad8f7758ee19fbaa7a94164f5f58d446"
+            "url": "https://download.oracle.com/otn_software/nt/instantclient/1919000/instantclient-odbc-nt-19.19.0.0.0dbru.zip",
+            "hash": "34a9e75960122374cc169ee640817c49258dd69688e5eab3008516f87c8223e4"
         }
     },
-    "extract_dir": "instantclient_19_17",
+    "extract_dir": "instantclient_19_19",
     "pre_install": [
-        "$instantclient = versiondir 'oracle-instant-client' 'current'",
+        "$instantclient = currentdir 'oracle-instant-client19'",
         "Copy-Item -Path \"$dir\\*\" -Destination \"$instantclient\" -Force -Recurse | Out-Null"
     ],
     "uninstaller": {
         "script": [
-            "$instantclient = versiondir 'oracle-instant-client' 'current'",
+            "$instantclient = currentdir 'oracle-instant-client19'",
             "Get-ChildItem -Path \"$dir\" -Exclude *.json | ForEach-Object { Remove-Item -LiteralPath \"$instantclient\\$($_.Name)\" -Recurse -Force -ErrorAction SilentlyContinue }"
         ]
     },
     "checkver": {
-        "url": "https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html",
+        "url": "https://www.oracle.com/database/technologies/instant-client/microsoft-windows-32-downloads.html",
         "regex": "Version (19[\\d.]+)",
         "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
     },

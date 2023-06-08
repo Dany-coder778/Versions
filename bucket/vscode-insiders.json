@@ -1,5 +1,5 @@
 {
-    "version": "1.75.0-insider",
+    "version": "1.79.0-insider+1686147847782",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -7,20 +7,23 @@
         "url": "https://code.visualstudio.com/License/"
     },
     "notes": [
-        "Visual Studio Code now supports Portable Mode! Please move the following directories:",
-        "From \"$env:USERPROFILE\\.vscode-insiders\\extensions\" to \"$env:SCOOP\\persist\\vscode-insiders\\data\\extensions\"",
-        "From \"$env:APPDATA\\Code - Insiders\" to \"$env:SCOOP\\persist\\vscode-insiders\\data\\user-data\"",
-        "Add Visual Studio Code as a context menu option by running: '$dir\\install-context.reg'",
-        "For file associations, run '$dir\\install-associations.reg'"
+        "Add Visual Studio Code as a context menu option by running:",
+        "'reg import \"$dir\\install-context.reg\"'",
+        "For file associations, run:",
+        "'reg import \"$dir\\install-associations.reg\"'"
     ],
     "architecture": {
         "64bit": {
             "url": "https://update.code.visualstudio.com/latest/win32-x64-archive/insider#/dl.7z",
-            "hash": "24f177034516bd39e188a6eb107b39bd1f0e01635f8f5ec8990719d8e77a4929"
+            "hash": "7912214a56499e02ffaf24ce37fbf86abb76a9ee1b45a4ce7be4fb8e61b829b5"
         },
         "32bit": {
             "url": "https://update.code.visualstudio.com/latest/win32-archive/insider#/dl.7z",
-            "hash": "cd664d2483d4ef529fb7feb1c1cf011d1374ced17eb45dc8feebdd01333a7e70"
+            "hash": "036d80ab7d5efe2a4688b9a0f7d4a37c680a2d5209f81415821c49d229b13227"
+        },
+        "arm64": {
+            "url": "https://update.code.visualstudio.com/latest/win32-arm64-archive/insider#/dl.7z",
+            "hash": "fe442a7637c3a3f394bdccfcd0f943484d1fad133d3ff0fa62f0a601d02f9ae7"
         }
     },
     "post_install": [
@@ -37,6 +40,19 @@
         "    }",
         "    $content | Set-Content -Path \"$dir\\$_.reg\"",
         "  }",
+        "}",
+        "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.vscode-insiders\\extensions\")) {",
+        "    info '[Portable Mode] Copying extensions...'",
+        "    Copy-Item \"$env:USERPROFILE\\.vscode-insiders\\extensions\" \"$dir\\data\" -Recurse",
+        "}",
+        "if (!(Test-Path \"$dir\\data\\user-data\") -and (Test-Path \"$env:AppData\\Code - Insiders\")) {",
+        "    info '[Portable Mode] Copying user data...'",
+        "    Copy-Item \"$env:AppData\\Code - Insiders\" \"$dir\\data\\user-data\" -Recurse",
+        "}",
+        "$extensions_file = \"$dir\\data\\extensions\\extensions.json\"",
+        "if ((Test-Path \"$extensions_file\")) {",
+        "    info 'Adjusting path in extensions file...'",
+        "    (Get-Content \"$extensions_file\") -replace '(?<=vscode-insiders(/|\\\\\\\\)).*?(?=(/|\\\\\\\\)data(/|\\\\\\\\)extensions)', $version | Set-Content \"$extensions_file\"",
         "}"
     ],
     "env_add_path": "bin",
@@ -47,9 +63,14 @@
         ]
     ],
     "persist": "data",
+    "uninstaller": {
+        "script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
+    },
     "checkver": {
         "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/insider/latest",
-        "jsonpath": "$.productVersion"
+        "jsonpath": "$..['productVersion','timestamp']",
+        "regex": "^(?<productVersion>.+)\\\\n(?<timestamp>.*)$",
+        "replace": "${productVersion}+${timestamp}"
     },
     "autoupdate": {
         "architecture": {
@@ -64,6 +85,13 @@
                 "url": "https://update.code.visualstudio.com/latest/win32-archive/insider#/dl.7z",
                 "hash": {
                     "url": "https://update.code.visualstudio.com/api/update/win32-archive/insider/latest",
+                    "jsonpath": "$.sha256hash"
+                }
+            },
+            "arm64": {
+                "url": "https://update.code.visualstudio.com/latest/win32-arm64-archive/insider#/dl.7z",
+                "hash": {
+                    "url": "https://update.code.visualstudio.com/api/update/win32-arm64-archive/insider/latest",
                     "jsonpath": "$.sha256hash"
                 }
             }

@@ -1,12 +1,12 @@
 {
-    "version": "1420",
+    "version": "1547",
     "description": "Communications and data transfer between devices over local networks",
     "homepage": "https://apps.kde.org/kdeconnect",
     "license": "LGPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Nightly_win64/1420/artifact/kdeconnect-kde-master-1420-windows-cl-msvc2019-x86_64.7z",
-            "hash": "216588df75b112cd30310bf883a3c5eee8967ed20135aeaa7d91183f72ee1207"
+            "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Nightly_win64/1547/artifact/kdeconnect-kde-master-1547-windows-cl-msvc2019-x86_64.7z",
+            "hash": "9b00bee379b7635597393df45627096feedd932d550b965cf3358df8dfb1dcd3"
         }
     },
     "bin": [

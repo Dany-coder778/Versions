@@ -1,5 +1,5 @@
 {
-    "version": "20230129-949e74bbd",
+    "version": "20230604-f57897a9b",
     "description": "Snapshot releases of the tool for converting video from nearly any format to a selection of modern, widely supported codecs.",
     "homepage": "https://handbrake.fr",
     "license": "GPL-2.0-only",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HandBrake/HandBrake-snapshots/releases/download/win/HandBrake-20230129-949e74bbd-x86_64-Win_GUI.zip",
-            "hash": "43f6599f7cfd89fce0cab16857517c139a2c8c294fd4db1946487d33db3539cb"
+            "url": "https://github.com/HandBrake/HandBrake-snapshots/releases/download/win/HandBrake-20230604-f57897a9b-x86_64-Win_GUI.zip",
+            "hash": "b0ae76647fe54770afb88d274bb261d4b11a9e4ac8b0ee2a22cf030dd7f9e800"
         }
     },
     "extract_dir": "HandBrake",
