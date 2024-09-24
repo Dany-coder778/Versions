@@ -1,13 +1,13 @@
 {
-    "version": "2022.3-223.7571.953-EAP1",
+    "version": "2024.1-241.17011.787-EAP2",
     "description": "Domain-Specific language creator by JetBrains. (Early Access Program)",
     "homepage": "https://www.jetbrains.com/mps/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "url": "https://download.jetbrains.com/mps/2022.3/MPS-2022.3-EAP1.exe#/dl.7z",
-    "hash": "793c89a8c2de072dcf4b8dc9590cffd8f34b000061379f64c049052423c06767",
+    "url": "https://download.jetbrains.com/mps/2024.1/MPS-2024.1-EAP2.exe#/dl.7z",
+    "hash": "6f0c7433b0b4bab2342a4f1f01686e94913d4105b1e1104a5de750290cb0908d",
     "extract_to": "IDE",
     "installer": {
         "script": [

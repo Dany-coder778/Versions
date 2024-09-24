@@ -1,5 +1,5 @@
 {
-    "version": "9.0.1655",
+    "version": "9.1.0741",
     "description": "A highly configurable text editor for efficiently creating and changing any kind of text.",
     "homepage": "https://www.vim.org",
     "license": "Vim",
@@ -9,15 +9,15 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.0.1655/gvim_9.0.1655_x64.zip",
-            "hash": "b0e01fddea9c21274459cd35a46567e46ba624eda066da59db966874ba3a72cb"
+            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.1.0741/gvim_9.1.0741_x64.zip",
+            "hash": "e643cddc5ac61121616344ce3cfa38d320b97b2c662dd11ad6776110e761f21e"
         },
         "32bit": {
-            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.0.1655/gvim_9.0.1655_x86.zip",
-            "hash": "479296b16240084c89e2f6ad5b37c2445e543c2173a38b6a619b4d171b4418a4"
+            "url": "https://github.com/vim/vim-win32-installer/releases/download/v9.1.0741/gvim_9.1.0741_x86.zip",
+            "hash": "a02aa8c4377960d5ae5f59938b2bf1ec52e28d5c46282a686abfa620c2a60c1d"
         }
     },
-    "extract_dir": "vim\\vim90",
+    "extract_dir": "vim\\vim91",
     "post_install": [
         "Remove-Item \"$dir\\`$*\", \"$dir\\uninstal.*\", \"$dir\\install.exe\" -Recurse",
         "'install-context.reg', 'uninstall-context.reg' | ForEach-Object {",

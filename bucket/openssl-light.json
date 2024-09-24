@@ -1,16 +1,20 @@
 {
     "homepage": "https://slproweb.com/products/Win32OpenSSL.html",
-    "version": "3.1.1",
+    "version": "3.3.2",
     "license": "Apache-2.0",
     "description": "TLS/SSL toolkit (Light)",
     "architecture": {
         "64bit": {
-            "url": "https://slproweb.com/download/Win64OpenSSL_Light-3_1_1.exe",
-            "hash": "c3900d6f45f57574beec628ebadb65f8011791ef5332d819493ffbbf2f2d78fa"
+            "url": "https://slproweb.com/download/Win64OpenSSL_Light-3_3_2.exe",
+            "hash": "b2d1f5fb0021b3818ec99dac84d9236a6ddd7e44917061cf8508aec0911a2f65"
         },
         "32bit": {
-            "url": "https://slproweb.com/download/Win32OpenSSL_Light-3_1_1.exe",
-            "hash": "e76b0b2b9ab78f85c71de8396043ae69ccd7ffc4b99470a8bbe27a350e9dbe75"
+            "url": "https://slproweb.com/download/Win32OpenSSL_Light-3_3_2.exe",
+            "hash": "2268495548aba27dca42f6544c3b6765d1e31bcc759789649034788482b17ce1"
+        },
+        "arm64": {
+            "url": "https://slproweb.com/download/Win64ARMOpenSSL_Light-3_3_2.exe",
+            "hash": "f1e0e65bb82ddf467a7df3bc95d79d8d8410c797c4eb7d72d2935c8a75016925"
         }
     },
     "depends": "innounp",
@@ -25,7 +29,12 @@
     "env_set": {
         "OPENSSL_CONF": "$dir\\bin\\cnf\\openssl.cnf"
     },
-    "checkver": "Win32 OpenSSL v([^\\s]+)\\s+Light",
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/slproweb/opensslhashes/master/win32_openssl_hashes.json",
+        "jsonpath": "$.files..basever",
+        "regex": "([\\d.]+)",
+        "reverse": true
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -33,12 +42,14 @@
             },
             "32bit": {
                 "url": "https://slproweb.com/download/Win32OpenSSL_Light-$underscoreVersion.exe"
+            },
+            "arm64": {
+                "url": "https://slproweb.com/download/Win64ARMOpenSSL_Light-$underscoreVersion.exe"
             }
         },
         "hash": {
-            "mode": "json",
-            "jsonpath": "$.files.['$basename'].sha256",
-            "url": "https://raw.githubusercontent.com/slproweb/opensslhashes/master/win32_openssl_hashes.json"
+            "url": "https://raw.githubusercontent.com/slproweb/opensslhashes/master/win32_openssl_hashes.json",
+            "jsonpath": "$.files.['$basename'].sha256"
         }
     }
 }

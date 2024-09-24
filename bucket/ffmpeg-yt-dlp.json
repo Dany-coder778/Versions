@@ -1,5 +1,5 @@
 {
-    "version": "6.0-25-20230623",
+    "version": "7.0.2-18-20240923",
     "description": "FFMpeg builds of latest release branch with patches necessary for smooth integration with yt-dlp",
     "homepage": "https://github.com/yt-dlp/FFmpeg-Builds",
     "license": "MIT",
@@ -8,14 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2023-06-23-14-11/ffmpeg-n6.0-25-g868af7d7a4-win64-gpl-6.0.zip",
-            "hash": "5d8d129913191c23a0814a806f4c6b4318c72c91c4f1ed7f205ab4eb3581c837",
-            "extract_dir": "ffmpeg-n6.0-25-g868af7d7a4-win64-gpl-6.0"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2024-09-23-16-49/ffmpeg-n7.0.2-18-g3e6cec1286-win64-gpl-7.0.zip",
+            "hash": "7e3933600fd6983296ca5baae4062a76f4a71e7dce72ce5992d9c125ee57ba45",
+            "extract_dir": "ffmpeg-n7.0.2-18-g3e6cec1286-win64-gpl-7.0"
         },
         "32bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2023-06-23-14-11/ffmpeg-n6.0-25-g868af7d7a4-win32-gpl-6.0.zip",
-            "hash": "46bf7aba85cb470396e8af248276568278fbe9b9c531ea98bd80ed0bee7c7b2a",
-            "extract_dir": "ffmpeg-n6.0-25-g868af7d7a4-win32-gpl-6.0"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2024-09-23-16-49/ffmpeg-n7.0.2-18-g3e6cec1286-win32-gpl-7.0.zip",
+            "hash": "3576abaec2e04bde424004559901e8cf00936f459255378fe9e256a41e642739",
+            "extract_dir": "ffmpeg-n7.0.2-18-g3e6cec1286-win32-gpl-7.0"
         }
     },
     "bin": [
@@ -26,7 +26,7 @@
     "checkver": {
         "script": [
             "# 32-bit file is either listed above or below the 64-bit one. Therefore we need a checkver script to match it.",
-            "$url = 'https://api.github.com/repos/yt-dlp/FFmpeg-Builds/releases'",
+            "$url = 'https://api.github.com/repositories/377430603/releases'",
             "$regex_64bit = 'autobuild-(?<buildtime>(?<builddate>\\d{4}-\\d{2}-\\d{2})-\\d{2}-\\d{2})/(?<filename>ffmpeg-n(?<ffmpegver>[\\d.-]+)-\\w+-win64-gpl-[\\d.]+)\\.zip'",
             "$regex_32bit = $regex_64bit.replace('win64', 'win32')",
             "$cont = $(Invoke-WebRequest($url)).Content | ConvertFrom-Json",

@@ -1,21 +1,21 @@
 {
-    "version": "5361589931",
+    "version": "11004641883",
     "description": "Graphical process/system monitor",
     "homepage": "https://github.com/ClementTsang/bottom",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/ClementTsang/bottom/releases/download/nightly/bottom_x86_64-pc-windows-msvc.zip",
-            "hash": "a73b3772ec3f539b8049d3fc3dd69e4e3267ccf7bb40d5cfd80393c00636b737"
+            "hash": "db38736fa1ebb8db621628167e2dd6b8828e39271fcc1fe9b92310ea8ece1d49"
         },
         "32bit": {
             "url": "https://github.com/ClementTsang/bottom/releases/download/nightly/bottom_i686-pc-windows-msvc.zip",
-            "hash": "d9351997e8fe8ded59cc273eb14ef068145ed1da6e2e3637dda6994c67a07bd7"
+            "hash": "d68c5bfb9665adfa6e54755a491b56e2995ac44b46ef67b10762f4dc3634e3d1"
         }
     },
     "bin": "btm.exe",
     "checkver": {
-        "url": "https://api.github.com/repositories/205042455/actions/workflows/nightly.yml/runs?branch=master&status=success",
+        "url": "https://api.github.com/repositories/205042455/actions/workflows/nightly.yml/runs?branch=main&status=success",
         "jsonpath": "$.workflow_runs[0].id"
     },
     "autoupdate": {

@@ -1,5 +1,5 @@
 {
-    "version": "8.0.100-preview.5.23303.2",
+    "version": "9.0.100-preview.7.24407.12",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "homepage": "https://www.microsoft.com/net/",
     "license": "MIT",
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.100-preview.5.23303.2/dotnet-sdk-8.0.100-preview.5.23303.2-win-x64.zip",
-            "hash": "sha512:5de8ac61d97425429f9c1d67acddd3ae157526610e0cef1a42399d0fa19be7665f77eb7a44586d2282385411a31466a711da12a7fdf484776364f792c0518746"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-preview.7.24407.12/dotnet-sdk-9.0.100-preview.7.24407.12-win-x64.zip",
+            "hash": "sha512:99ed1ff4207b8e465b0a483649be860164fb9d4003ee08b1758d0db0df194dda523be4896572c21bfc6ca333f3408b48c14872cf5748a5af7c4d2682f29d8d3b"
         },
         "32bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.100-preview.5.23303.2/dotnet-sdk-8.0.100-preview.5.23303.2-win-x86.zip",
-            "hash": "sha512:c9ffad27517ac279a621d0ee406db7a9b6012797f1cf6f5dc1585bc774e7d2a7719bf19dd072bfb49ac673c1d0618a7a82f8c56e26a3c3ad21395ea73c586cb7"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-preview.7.24407.12/dotnet-sdk-9.0.100-preview.7.24407.12-win-x86.zip",
+            "hash": "sha512:ba3b33dc34e811e9d740e9af00844a5cc67372718e45226b859812b917ac50b9249397752c8b0b63ce87339df5530f1e27d8863bfd2690834e51c38cb3bf4be7"
         },
         "arm64": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.100-preview.5.23303.2/dotnet-sdk-8.0.100-preview.5.23303.2-win-arm64.zip",
-            "hash": "sha512:e6d8856264eba3fe77edae5574e785b0308cba8561b5b580783e72f5234eb4706bd62ca1cb9c81ad345e69df747cac697a367f02374a28ae869ce9411a1bc716"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-preview.7.24407.12/dotnet-sdk-9.0.100-preview.7.24407.12-win-arm64.zip",
+            "hash": "sha512:69c9b7fd4772509a343907a3cc386660caff5295fda42e64ae62c52147ba2adbd9511fa976dd9738df0643a3596a5c7eaa3e51a0f8bc8ffd4101eea706a5dd2b"
         }
     },
     "env_add_path": ".",
